@@ -1,0 +1,16 @@
+STORE "price" with number 0
+STORE "status" with string "no"
+STORE "item" with number 0
+
+WHILE "status" = "no"
+    DO 
+        STORE "item" with CALCULATE "item" plus by number
+        IF "item" > 0
+            STORE "price" with CALCULATE "price" plus by number
+        ELSE
+            PRINT "Masukkan jumlah item di atas 0. Ketik "no" pada status jika Anda ingin memasukkan ulang jumlah item."
+            STORE "item" with number 0
+        STORE "status" with string
+    END DO
+PRINT "item"
+PRINT "price"
